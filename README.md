@@ -1,4 +1,30 @@
-# Autoantibodies-linked-to-autoimmune-diseases-associate-with-COVID-19-outcomes
-The SARS-CoV-2 infection is associated with increased levels of autoantibodies targeting immunological proteins such as cytokines and chemokines. Reports further indicate that COVID-19 patients may develop a wide spectrum of autoimmune diseases due to reasons not fully understood. Even so, the landscape of autoantibodies induced by SARS-CoV-2 infection remains uncharted territory. To gain more insight, we carried out a comprehensive assessment of autoantibodies known to be linked to diverse autoimmune diseases observed in COVID-19 patients, in a cohort of 248 individuals, of which171 were COVID-19 patients (74 with mild, 65 moderate, and 32 with severe disease) and 77were healthy controls. Dysregulated autoantibody serum levels, characterized mainly by elevated concentrations, occurred mostly in patients with moderate or severe COVID-19 infection, and was accompanied by a progressive disruption of physiologic IgG and IgA autoantibody signatures. A similar perturbation was found in patients with anosmia. Notably, autoantibody levels often accompanied  anti-SARS-CoV-2 antibody concentrations, being both indicated by random forest classification as strong predictors of COVID-19 outcome, together with age. Moreover, higher levels of autoantibodies (mainly IgGs) were seen in the elderly with severe disease compared with young COVID-19 patients with severe disease . These findings suggest that the SARS-CoV-2 infection induces a broader loss of self-tolerance than previously thought, providing new ideas for  therapeutic interventions.  
+# Autoantibody signatures associated with COVID-19 severity
 
-Key words: Autoantibodies, autoimmune diseases, SARS-CoV-2 infection, COVID-19 outcomes
+Analysis code for:
+
+Baiocchi GC, Vojdani A, Rosenberg AZ, et al.
+**Cross-sectional analysis reveals autoantibody signatures associated with COVID-19 severity.**
+*Journal of Medical Virology* 2023;95(2):e28538. https://doi.org/10.1002/jmv.28538
+
+## Study
+
+IgG and IgA autoantibodies linked to autoimmune diseases were measured in 231 individuals:
+161 COVID-19 patients (72 mild, 61 moderate, 28 severe) and 70 healthy controls, all sampled
+before vaccination. Dysregulated autoantibody levels, mainly elevated concentrations, occurred
+predominantly in moderate and severe disease, and autoantibody levels tracked with
+anti-SARS-CoV-2 antibody concentration and age as classifiers of severity.
+
+## Analyses in this repository
+
+- Group comparisons of autoantibody levels (Kruskal-Wallis with Dunn post hoc, FDR-adjusted)
+- Autoantibody correlation signatures and hierarchical clustering
+- Multi-study factor analysis
+- Principal component analysis with spectral decomposition
+- Random-forest classification of severity (5,000 trees; variable importance by Gini decrease,
+  mean minimum depth and node count; evaluated by out-of-bag error and ROC)
+
+Code is in `R codes/`. Data are in the paper's Supporting Information.
+
+## Citation
+
+If you use this code, please cite the paper above.
